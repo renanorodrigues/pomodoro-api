@@ -4,7 +4,9 @@ ENV INSTALL_PATH /app
 
 RUN apk add --update \
   postgresql-dev \
-  tzdata
+  tzdata \
+  nodejs \
+  yarn
 
 FROM base AS dependencies
 
