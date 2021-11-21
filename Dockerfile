@@ -1,4 +1,4 @@
-FROM ruby:2.7.1-alpine AS base
+FROM ruby:3.0-alpine AS base
 
 ENV INSTALL_PATH /app
 
