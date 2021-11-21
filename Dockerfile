@@ -2,11 +2,30 @@ FROM ruby:2.7.1-alpine AS base
 
 ENV INSTALL_PATH /app
 
-RUN apk add --update \
-  postgresql-dev \
-  tzdata \
-  nodejs \
-  yarn
+RUN apk add --update --no-cache curl py-pip \
+      binutils-gold \
+      build-base \
+      curl \
+      file \
+      g++ \
+      gcc \
+      git \
+      less \
+      libstdc++ \
+      libffi-dev \
+      libc-dev \
+      linux-headers \
+      libxml2-dev \
+      libxslt-dev \
+      libgcrypt-dev \
+      make \
+      netcat-openbsd \
+      nodejs \
+      openssl \
+      pkgconfig \
+      postgresql-dev \
+      tzdata \
+      yarn
 
 FROM base AS dependencies
 
